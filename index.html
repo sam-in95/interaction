@@ -5,9 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="main.js" defer></script>
+
+    <style>
+      body {
+        background-color: lightyellow;
+      }
+
+      .bgcolor--blue {
+        background-color: lightblue;
+      }
+    </style>
   </head>
   <body>
     <h1></h1>
+    <button class="btn_bg">배경색상변경</button>
+
+    <script>
+      const $btn_bg = document.querySelector('.btn_bg');
+      $btn_bg.addEventListener('click', () => {
+        document.body.classList.toggle('bgcolor--blue');
+      });
+    </script>
   </body>
 </html>
