@@ -7,29 +7,18 @@
     <title>03/15 과제</title>
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
       body {
-        background-color: lightyellow;
+        background: linear-gradient(120deg, #3a3a3a, #8a8a8a);
         transition: 0.5s;
         width: 100%;
-        overflow: hidden;
-      }
-
-      .wrap {
-        width: 700px;
-        margin: 50px 0 0 50px;
+        height: 100vh;
         display: flex;
-        justify-content: space-between;
-      }
-
-      body img {
-        position: absolute;
-        z-index: -1;
-        background: cover;
-        top: 0;
-        left: 0;
-        width: 100%;
-        opacity: 0;
-        transition: 0.5s;
+        justify-content: center;
+        overflow: hidden;
       }
 
       button {
@@ -38,60 +27,53 @@
         height: 40px;
         border: none;
         border-radius: 20px;
-        background-color: lightgreen;
-        font-weight: bold;
+        background-color: #fff;
+        margin: 20px 2vw;
       }
+
       button:hover {
-        background-color: rgb(52, 197, 52);
+        background-color: lightgrey;
         color: #fff;
       }
 
+      button:active {
+        transform: scale(95%);
+      }
+
       .bg_color--blue {
-        background-color: lightblue;
+        /* background-color: lightblue; */
+        background: linear-gradient(120deg, #0b81c5, #90b5df);
       }
 
-      .bg_color--gray {
-        background-color: lightgray;
+      .bg_color--purple {
+        background: linear-gradient(30deg, #bc9fe2, #e2c5fd);
       }
 
-      .bg_img_on {
-        opacity: 1;
+      .bg_color--green {
+        background: linear-gradient(30deg, #46a507, #8ee678);
       }
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <img src="img.jpg" alt="" />
-      <button class="btn_01">배경색상 변경</button>
-      <button class="btn_02">배경색 회색으로</button>
-      <button class="btn_03">배경색 초기화</button>
-      <button class="btn_04">배경 이미지</button>
-    </div>
+    <button class="btn_01">BLUE</button>
+    <button class="btn_02">PURPLE</button>
+    <button class="btn_03">GREEN</button>
 
     <script>
-      const $btn_1 = document.querySelector('.btn_01');
-      const $btn_2 = document.querySelector('.btn_02');
-      const $btn_3 = document.querySelector('.btn_03');
-      const $btn_4 = document.querySelector('.btn_04');
-      const backImg = document.querySelector('.wrap img');
+      const $btns = document.querySelectorAll('button');
+      const bgColor = ['bg_color--blue', 'bg_color--purple', 'bg_color--green'];
 
-      $btn_1.addEventListener('click', () => {
-        document.body.classList.remove('bg_color--gray');
-        document.body.classList.toggle('bg_color--blue');
-      });
+      const deletColor = () => {
+        for (let i = 0; i < bgColor.length; i++) {
+          document.body.classList.remove(bgColor[i]);
+        }
+      };
 
-      $btn_2.addEventListener('click', () => {
-        document.body.classList.toggle('bg_color--gray');
-      });
-
-      $btn_3.addEventListener('click', () => {
-        document.body.classList.remove('bg_color--blue');
-        document.body.classList.remove('bg_color--gray');
-        backImg.classList.remove('bg_img_on');
-      });
-
-      $btn_4.addEventListener('click', () => {
-        backImg.classList.toggle('bg_img_on');
+      $btns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          deletColor();
+          document.body.classList.toggle(bgColor[index]);
+        });
       });
     </script>
   </body>
