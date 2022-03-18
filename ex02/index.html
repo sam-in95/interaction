@@ -12,7 +12,7 @@
         padding: 0;
       }
       body {
-        background-color: #3a3a3a;
+        background-color: lightcoral;
         transition: 0.5s;
         width: 100%;
         height: 100vh;
@@ -21,6 +21,18 @@
         overflow: hidden;
       }
 
+      img {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        top: -250px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+
+      .img_show {
+        opacity: 1;
+      }
       button {
         cursor: pointer;
         width: 150px;
@@ -40,6 +52,11 @@
         transform: scale(95%);
       }
 
+      button.on {
+        background-color: darkgrey;
+        color: #fff;
+      }
+
       .bg_color--blue {
         background-color: #0b81c5;
       }
@@ -47,33 +64,95 @@
       .bg_color--purple {
         background-color: #bc9fe2;
       }
-
-      .bg_color--green {
-        background-color: #46a507;
-      }
     </style>
   </head>
   <body>
+    <img src="img.png" alt="" />
     <button class="btn_01">BLUE</button>
     <button class="btn_02">PURPLE</button>
-    <button class="btn_03">GREEN</button>
+    <button class="btn_03">IMAGE</button>
+    <button class="btn_04">RESET</button>
 
     <script>
+      // const $btns = document.querySelectorAll('button');
+      // const $blueBtn = document.querySelector('.btn_01');
+      // const $purpleBtn = document.querySelector('.btn_02');
+      // const $imgShowBtn = document.querySelector('.btn_03');
+      // const $resetBtn = document.querySelector('.btn_04');
+      // const $bodyImg = document.querySelector('body img');
+
+      // $blueBtn.addEventListener('click', function (e) {
+      //   document.body.classList.toggle('bg_color--blue');
+      //   buttonOn(e);
+      // });
+
+      // $purpleBtn.addEventListener('click', function (e) {
+      //   document.body.classList.toggle('bg_color--purple');
+      //   buttonOn(e);
+      // });
+
+      // $imgShowBtn.addEventListener('click', function (e) {
+      //   $bodyImg.classList.toggle('img_show');
+      //   buttonOn(e);
+      // });
+
+      // $resetBtn.addEventListener('click', () => {
+      //   resetAll();
+      // });
+
+      // // function buttonOn(e) {
+      // //   e.target.classList.toggle('on');
+      // // }
+
+      // const resetAll = () => {
+      //   document.body.classList.remove('bg_color--blue');
+      //   document.body.classList.remove('bg_color--purple');
+      //   $bodyImg.classList.remove('img_show');
+      //   $blueBtn.classList.remove('on');
+      //   $purpleBtn.classList.remove('on');
+      //   $imgShowBtn.classList.remove('on');
+      // };
+
       const $btns = document.querySelectorAll('button');
-      const bgColor = ['bg_color--blue', 'bg_color--purple', 'bg_color--green'];
+      const bgColor = ['bg_color--blue', 'bg_color--purple', 'img_show'];
+      const $bodyImg = document.querySelector('body img');
 
       const deletColor = () => {
         for (let i = 0; i < bgColor.length; i++) {
           document.body.classList.remove(bgColor[i]);
+          $bodyImg.classList.remove(bgColor[2]);
         }
       };
 
       $btns.forEach((btn, index) => {
         btn.addEventListener('click', () => {
           deletColor();
-          document.body.classList.toggle(bgColor[index]);
+          if (index == 2) {
+            $bodyImg.classList.toggle(bgColor[2]);
+          } else if (index < 2) {
+            document.body.classList.toggle(bgColor[index]);
+          } else if (index == 3) {
+            deletColor();
+          }
         });
       });
+      // 온오프안됨
+
+      // const $btns = document.querySelectorAll('button');
+      // const bgColor = ['bg_color--blue', 'bg_color--purple', 'bg_color--green'];
+
+      // const deletColor = () => {
+      //   for (let i = 0; i < bgColor.length; i++) {
+      //     document.body.classList.remove(bgColor[i]);
+      //   }
+      // };
+
+      // $btns.forEach((btn, index) => {
+      //   btn.addEventListener('click', () => {
+      //     deletColor();
+      //     document.body.classList.toggle(bgColor[index]);
+      //   });
+      // });
     </script>
   </body>
 </html>
