@@ -96,7 +96,7 @@
 
       $btns.forEach((btn, index) => {
         btn.addEventListener('click', (e) => {
-          if (document.body.classList.contains(bgColor[index]) && $bodyImg.classList.contains(bgColor[2])) {
+          if (document.body.classList.contains(bgColor[index]) || $bodyImg.classList.contains(bgColor[2])) {
             if (index == 2) {
               $bodyImg.classList.remove(bgColor[2]);
             } else if (index < 2) {
