@@ -6,74 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>03/15 과제</title>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background-color: lightcoral;
-        transition: 0.5s;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-      }
-
-      img {
-        width: 100%;
-        position: absolute;
-        z-index: -1;
-        top: -300px;
-        opacity: 0;
-        transition: 0.5s;
-      }
-
-      .img_show {
-        opacity: 1;
-      }
-
-      button {
-        cursor: pointer;
-        width: 150px;
-        height: 40px;
-        border: none;
-        border-radius: 20px;
-        background-color: #fff;
-        margin: 20px 2vw;
-      }
-
-      button:hover {
-        background-color: lightgrey;
-        color: #fff;
-      }
-
-      button:active {
-        transform: scale(95%);
-      }
-
-      .bg_color--blue {
-        background-color: #0b81c5;
-      }
-
-      .bg_color--purple {
-        background-color: #bc9fe2;
-      }
-
-      @media (max-width: 1175px) {
-        img {
-          top: 0;
-        }
-      }
-
-      @media (max-width: 875px) {
-        img {
-          width: 300%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <img src="img.png" alt="" />
@@ -82,40 +15,6 @@
     <button class="btn_03">IMAGE</button>
     <button class="btn_04">RESET</button>
 
-    <script>
-      const $btns = document.querySelectorAll('button');
-      const bgColor = ['bg_color--blue', 'bg_color--purple', 'img_show'];
-      const $bodyImg = document.querySelector('body img');
-
-      const deletColor = () => {
-        for (let i = 0; i < bgColor.length; i++) {
-          document.body.classList.remove(bgColor[i]);
-          $bodyImg.classList.remove(bgColor[2]);
-        }
-      };
-
-      $btns.forEach((btn, index) => {
-        btn.addEventListener('click', (e) => {
-          if (document.body.classList.contains(bgColor[index]) || $bodyImg.classList.contains(bgColor[2])) {
-            if (index == 2) {
-              $bodyImg.classList.remove(bgColor[2]);
-            } else if (index < 2) {
-              document.body.classList.remove(bgColor[index]);
-            } else if (index == 3) {
-              deletColor();
-            }
-          } else {
-            deletColor();
-            if (index == 2) {
-              $bodyImg.classList.add(bgColor[2]);
-            } else if (index < 2) {
-              document.body.classList.add(bgColor[index]);
-            } else if (index == 3) {
-              deletColor();
-            }
-          }
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
