@@ -1,9 +1,9 @@
-const $btns = document.querySelectorAll('button');
-const bgColor = ['bg_color--blue', 'bg_color--purple', 'img_show'];
-const $bodyImg = document.querySelector('body img');
+const $btns = document.querySelectorAll("button");
+const bgColor = ["bg_color--blue", "bg_color--purple", "img_show"];
+const $bodyImg = document.querySelector("body img");
 
 $btns.forEach((btn, index) => {
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener("click", (e) => {
     if (document.body.classList.contains(bgColor[index]) || $bodyImg.classList.contains(bgColor[2])) {
       if (index == 2) {
         $bodyImg.classList.remove(bgColor[2]);
