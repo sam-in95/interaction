@@ -27,7 +27,7 @@ body {
 
 .btn {
   width: 15%;
-  height: 40px;
+  height: 60px;
   background-color: greenyellow;
   border: 1px solid #4d7f8c;
   border-radius: 10px;
@@ -57,6 +57,7 @@ body {
   cursor: pointer;
   outline: none;
   color: #fff;
+  transition: 0.3s;
   opacity: 0;
 }
 
@@ -64,7 +65,7 @@ body {
   font-size: 30px;
 }
 
-.top.top_on {
+.top.top_show {
   opacity: 1;
 }
 .contents {

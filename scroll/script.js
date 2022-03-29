@@ -1,5 +1,6 @@
 const $btns = document.querySelectorAll(".btn");
 const $contents = document.querySelectorAll(".contents");
+
 $btns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     $contents[index].scrollIntoView({ behavior: "smooth", block: "center" });
@@ -9,10 +10,10 @@ $btns.forEach((btn, index) => {
 const $topBtn = document.querySelector(".top");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 60) {
-    $topBtn.style.opacity = "1";
+  if (window.scrollY > 300) {
+    $topBtn.classList.add("top_show");
   } else {
-    $topBtn.style.opacity = "0";
+    $topBtn.classList.remove("top_show");
   }
 });
 
