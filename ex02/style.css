@@ -45,6 +45,10 @@ button:active {
   transform: scale(95%);
 }
 
+button.on {
+  color: #fff;
+  background-color: darkgrey;
+}
 .bg_color--blue {
   background-color: #0b81c5;
 }
