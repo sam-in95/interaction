@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --brown_color: #986743;
+  --text_light_gray: #dedede;
+  --icon_magenta: #f900c7;
+  --wrap: 1240px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  min-width: 1920px;
+  background-color: #000;
+}
+
+button {
+  border: none;
+  background-color: none;
+  outline: none;
+  cursor: pointer;
+}
+.wrap {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+.header_warp {
+  width: var(--wrap);
+  margin: 0 auto;
+}
+
+.alert_nav_wrap {
+  width: 100%;
+  height: 50px;
+  background-color: var(--brown_color);
+  display: flex;
+  justify-content: center;
+}
+
+.alert_nav {
+  position: relative;
+  width: 1240px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+}
+
+.alert_nav a {
+  text-decoration: underline;
+}
+
+.alert_nav .esc {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 0;
+  top: 19px;
+}
+
+.main_header_wrap {
+  width: 100%;
+  background-color: #000;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+}
+
+.main_header {
+  position: relative;
+  width: var(--wrap);
+  height: 85px;
+}
+
+.logo {
+  width: 170px;
+  margin: 25px auto;
+  transform: translateX(-20%);
+}
+
+.login_n_basket {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+
+.header_btn {
+  border: 1px;
+  border-radius: 20px;
+  width: 125px;
+  height: 40px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.header_btn a {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 40px;
+}
+
+.header_btn .icon {
+  width: 20px;
+  height: 20px;
+  background-color: var(--icon_magenta);
+  margin-top: 10px;
+}
+
+.login_btn {
+  border: 1px solid #dedede;
+}
+
+.basket_btn {
+  border: 1px solid #c75b18;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+.nav_wrap {
+  width: 820px;
+}
+
+.nav_wrap ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_wrap li {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 50px;
+}
+
+/* header */
+
+/* banner */
+.banner {
+  width: 100%;
+  height: 815px;
+  background: url(img/banner_back.png);
+}
+
+.banner_machine {
+  width: 640px;
+  height: 640px;
+  margin: 0 auto;
+  padding-top: 300px;
+}
+
+.banner_machine img {
+  width: 640px;
+  height: 640px;
+}
+/* banner */
+
+/* section */
+
+/* experience */
+.experience_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.experience {
+  width: var(--wrap);
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience_left {
+  margin-top: 228px;
+  margin-left: 105px;
+}
+
+/* section 공용 */
+.head_text .red_point {
+  font-weight: 300;
+  font-size: 16px;
+  color: #d3391b;
+  letter-spacing: 0.01em;
+}
+
+.head_text h2 {
+  font-weight: 900;
+  font-size: 50px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  line-height: 70px;
+}
+
+.head_text .sub_head {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text_light_gray);
+  letter-spacing: 0.01em;
+  line-height: 50px;
+}
+
+.more_btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #999;
+  width: 110px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 24px;
+  margin-top: 40px;
+  background-color: transparent;
+}
+
+.icon_more {
+  width: 7px;
+  height: 12px;
+  margin-top: 6px;
+  background: url(img/icon_more_btn_arrow.png) no-repeat;
+  background-size: cover;
+}
+/* section 공용 */
+
+.experience_slide_wrap {
+  margin-top: 85px;
+  position: relative;
+}
+
+.experience_slide .slide_head {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--text_light_gray);
+  letter-spacing: 0.01em;
+}
+
+.experience_slide p {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--text_light_gray);
+  letter-spacing: 0.01em;
+  line-height: 30px;
+}
+
+.experience_slide_btn {
+  width: 36px;
+  height: 36px;
+  background: url(img/btn_prev.png) no-repeat;
+  position: absolute;
+}
+
+.experience_btn_left {
+  top: 60px;
+  left: -70px;
+}
+
+.experience_btn_right {
+  top: 60px;
+  right: -70px;
+  transform: rotate(180deg);
+}
+
+.experience_btn_right .arrow {
+  background-position: top 1px right -2px;
+  transform: rotate(180deg);
+}
+/* experience */
+
+/* machine */
+.machine_wrap {
+  width: 100%;
+}
+
+.machine {
+  width: var(--wrap);
+  margin: 0 auto;
+  padding-top: 110px;
+}
+
+.machine .head_text {
+  text-align: center;
+}
+
+.machine_slide_wrap {
+  margin-top: 145px;
+  position: relative;
+}
+
+.machine_slide {
+  width: var(--wrap);
+  height: 363px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.machine_item {
+  background-color: #111;
+  width: 295px;
+  height: 363px;
+  position: relative;
+}
+
+.machine_item p {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 40px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.machine_item img {
+  width: 178px;
+  margin: 2px 0 0 85px;
+}
+
+.machine_item:nth-child(2) img {
+  width: 184px;
+  margin: 2px 0 0 70px;
+}
+
+.machine_item:nth-child(3) img {
+  width: 146px;
+  margin: 26px 0 0 70px;
+}
+
+.machine_item:nth-child(4) img {
+  width: 155px;
+  margin: 26px 0 0 70px;
+}
+
+.machine_more_btn {
+  width: 156px;
+  height: 36px;
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  color: #fff;
+  font-size: 14px;
+  line-height: 36x;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.machine_slide_btn {
+  width: 36px;
+  height: 36px;
+  background: url(img/btn_prev.png) no-repeat;
+  position: absolute;
+}
+
+.machine_btn_prev {
+  top: 163px;
+  left: -60px;
+}
+
+.machine_btn_next {
+  top: 163px;
+  right: -60px;
+  transform: rotate(180deg);
+}
+/* machine */
+
+/* capsule */
+.capsule_wrap {
+  width: 100%;
+}
+
+.capsule {
+  width: var(--wrap);
+  margin: 130px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.capsule_left {
+  position: relative;
+}
+
+.capsule_circle {
+  position: absolute;
+  left: 0;
+}
+
+.capsule_n {
+  position: absolute;
+  left: -70px;
+}
+
+.capsule_right {
+  margin-top: 116px;
+}
+
+.capsule_right p {
+  font-size: 16px;
+  color: var(--text_light_gray);
+  line-height: 30px;
+  margin-top: 50px;
+  letter-spacing: 0.01em;
+}
+/* capsule */
+/* section */
