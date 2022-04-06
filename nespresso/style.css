@@ -35,6 +35,7 @@ button {
   right: 80px;
   top: 450px;
   transform: rotate(90deg);
+  z-index: 3;
 }
 
 .section_dot ul {
