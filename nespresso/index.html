@@ -4,35 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nespresso</title>
+    <title>네스프레소</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="css/header_footer.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="logo_svg.css" />
   </head>
   <body>
     <div class="wrap">
-      <div class="section_dot">
-        <ul>
-          <li>
-            <p>HOME</p>
-          </li>
-          <li class="section_now">
-            <p>NESPRESSO</p>
-          </li>
-          <li>
-            <p>MACHINE</p>
-          </li>
-          <li>
-            <p>CAPSULE</p>
-          </li>
-          <li>
-            <p>RECYCLE</p>
-          </li>
-        </ul>
-      </div>
       <header>
         <div class="alert_nav_wrap">
           <div class="alert_nav">
@@ -88,6 +70,28 @@
 
       <!-- banner -->
       <div class="banner">
+        <div class="section_dot">
+          <div class="section_now">
+            <div class="dot"></div>
+            <p>HOME</p>
+          </div>
+          <div>
+            <div class="dot"></div>
+            <p>NESPRESSO</p>
+          </div>
+          <div>
+            <div class="dot"></div>
+            <p>MACHINE</p>
+          </div>
+          <div>
+            <div class="dot"></div>
+            <p>CAPSULE</p>
+          </div>
+          <div>
+            <div class="dot"></div>
+            <p>RECYCLE</p>
+          </div>
+        </div>
         <svg id="svg_logo" data-name="그룹 3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="919.458" height="192.33" viewBox="0 0 919.458 192.33" fill="none">
           <defs>
             <clipPath id="clip-path">
@@ -203,22 +207,76 @@
             <h2>최상의 커피 경험</h2>
             <span class="sub_head">단 한번의 터치로 최고의 커피를 만나보세요</span>
           </div>
-          <div class="experience_slide_wrap">
-            <div class="experience_slide">
-              <p class="slide_head">최고의 테루아, 최고의 원두</p>
-              <p>
-                완벽하게 잘 익은 원두만을 수확하기 위해<br />
-                대부분의 원두는 손으로 직접 핸드 픽킹하게 됩니다.<br />
-                시간과 비용이 많이 들지만 이 방법을 통해<br />
-                최상의 커피를 확보할 수 있습니다.
-              </p>
-              <button class="more_btn">
-                자세히보기
-                <div class="icon_more"></div>
-              </button>
-            </div>
 
-            <button class="experience_slide_btn experience_btn_left">
+          <div class="experience_slide_wrap">
+            <div class="experience_slide_view">
+              <div class="experience_slide_move">
+                <div class="experience_slide ex_text_slide_1">
+                  <p class="slide_head">최고의 테루아, 최고의 원두</p>
+                  <p>
+                    완벽하게 잘 익은 원두만을 수확하기 위해<br />
+                    대부분의 원두는 손으로 직접 핸드 픽킹하게 됩니다.<br />
+                    시간과 비용이 많이 들지만 이 방법을 통해<br />
+                    최상의 커피를 확보할 수 있습니다.
+                  </p>
+                  <button class="more_btn">
+                    <div class="more_btn_inner">
+                      <div class="btn_text">자세히보기</div>
+                      <div class="icon_more"></div>
+                    </div>
+                  </button>
+                </div>
+                <div class="experience_slide ex_text_slide_2">
+                  <p class="slide_head">특별한 아로마를 위한 로스팅</p>
+                  <p>
+                    각각의 블렌딩 조합에 딱 맞는 로스팅 시간과 온도,<br />
+                    그리고 다른 조건들을 찾아냄으로써 각 원두가 가진<br />
+                    원산지의 특징을 최대한 끌어냅니다.<br />
+                    <br />
+                  </p>
+                  <button class="more_btn">
+                    <div class="more_btn_inner">
+                      <div class="btn_text">자세히보기</div>
+                      <div class="icon_more"></div>
+                    </div>
+                  </button>
+                </div>
+                <div class="experience_slide ex_text_slide_3">
+                  <p class="slide_head">완벽한 밀봉 시스템</p>
+                  <p>
+                    알루미늄 캡슐의 디자인은 커피가 가진 아로마를<br />
+                    완벽하게 밀봉하여 담을 수 있도록 고안되었습니다.<br />
+                    로스팅이 완성된 직후부터 캡슐에 담기까지 모든 과정은<br />
+                    철저하게 진공상태에서 진행됩니다.
+                  </p>
+                  <button class="more_btn">
+                    <div class="more_btn_inner">
+                      <div class="btn_text">자세히보기</div>
+                      <div class="icon_more"></div>
+                    </div>
+                  </button>
+                </div>
+                <div class="experience_slide ex_text_slide_4">
+                  <p class="slide_head">혁신적인 네스프레소의 기술</p>
+                  <p>
+                    클래식한 에스프레소 고압 추출 방식부터<br />
+                    혁신적인 센트리퓨전 회전 추출 방식으로 <br />
+                    에스프레소부터 머그 이상의 큰 컵까지<br />
+                    모든 레시피에 딱 맞는 최상의 커피 경험을 제공합니다.
+                  </p>
+                  <button class="more_btn">
+                    <div class="more_btn_inner">
+                      <div class="btn_text">자세히보기</div>
+                      <div class="icon_more"></div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <!-- slide_move -->
+            </div>
+            <!-- slide_view -->
+
+            <button class="experience_slide_btn experience_btn_left disabled">
               <div class="arrow"></div>
             </button>
             <button class="experience_slide_btn experience_btn_right">
@@ -226,10 +284,11 @@
             </button>
           </div>
         </div>
+
         <!--left -->
         <div class="experience_right">
           <div class="experience_img">
-            <div class="ex_imgs ex_img_1">
+            <div class="ex_imgs ex_img_1 now">
               <img src="img/coffee_process_01.png" alt="" />
             </div>
             <div class="ex_imgs ex_img_2">
@@ -244,7 +303,7 @@
           </div>
         </div>
 
-        <!-- experience_left -->
+        <!-- right -->
       </div>
       <!-- experience -->
     </section>
@@ -260,30 +319,80 @@
         </div>
 
         <div class="machine_slide_wrap">
-          <div class="machine_slide">
-            <div class="machine_item">
-              <p>버츄오 넥스트</p>
-              <img src="img/machine_vertuo_next_classic_black.png" alt="#" />
-              <button class="machine_more_btn">자세히보기</button>
-            </div>
-            <div class="machine_item">
-              <p>버츄오 넥스트 + 에어로치노</p>
-              <img src="img/machine_vertuo_next_classic_black_aero.png" alt="#" />
-              <button class="machine_more_btn">자세히보기</button>
-            </div>
-            <div class="machine_item">
-              <p>에센자 미니 C30</p>
-              <img src="img/machine_essenza_mini_C30.png" alt="#" />
-              <button class="machine_more_btn">자세히보기</button>
-            </div>
-            <div class="machine_item">
-              <p>픽시 C61</p>
-              <img src="img/machine_pixie_C61.png" alt="#" />
-              <button class="machine_more_btn">자세히보기</button>
+          <div class="machine_slide_view">
+            <div class="machine_slide_move">
+              <div class="machine_slide_con">
+                <div class="machine_item">
+                  <p>버츄오 넥스트</p>
+                  <img src="img/machine_vertuo_next_classic_black.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>버츄오 넥스트 + 에어로치노</p>
+                  <img src="img/machine_vertuo_next_classic_black_aero.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>에센자 미니 C30</p>
+                  <img src="img/machine_essenza_mini_C30.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>픽시 C61</p>
+                  <img src="img/machine_pixie_C61.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+              </div>
+
+              <div class="machine_slide_con">
+                <div class="machine_item">
+                  <p>버츄오 넥스트</p>
+                  <img src="img/machine_vertuo_next_classic_black.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>버츄오 넥스트 + 에어로치노</p>
+                  <img src="img/machine_vertuo_next_classic_black_aero.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>에센자 미니 C30</p>
+                  <img src="img/machine_essenza_mini_C30.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>픽시 C61</p>
+                  <img src="img/machine_pixie_C61.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+              </div>
+
+              <div class="machine_slide_con">
+                <div class="machine_item">
+                  <p>버츄오 넥스트</p>
+                  <img src="img/machine_vertuo_next_classic_black.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>버츄오 넥스트 + 에어로치노</p>
+                  <img src="img/machine_vertuo_next_classic_black_aero.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>에센자 미니 C30</p>
+                  <img src="img/machine_essenza_mini_C30.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+                <div class="machine_item">
+                  <p>픽시 C61</p>
+                  <img src="img/machine_pixie_C61.png" alt="#" />
+                  <button class="machine_more_btn">자세히보기</button>
+                </div>
+              </div>
             </div>
           </div>
 
-          <button class="machine_slide_btn machine_btn_prev"></button>
+          <button class="machine_slide_btn machine_btn_prev disabled"></button>
           <button class="machine_slide_btn machine_btn_next"></button>
 
           <div class="machine_slide_dot">
@@ -322,8 +431,10 @@
             나의 취향에 딱 맞는 커피를 찾아보세요.
           </p>
           <button class="more_btn">
-            자세히보기
-            <div class="icon_more"></div>
+            <div class="more_btn_inner">
+              <div class="btn_text">자세히보기</div>
+              <div class="icon_more"></div>
+            </div>
           </button>
         </div>
       </div>
@@ -345,8 +456,10 @@
             참여하고 지구를 보호해요.
           </p>
           <button class="more_btn">
-            자세히보기
-            <div class="icon_more"></div>
+            <div class="more_btn_inner">
+              <div class="btn_text">자세히보기</div>
+              <div class="icon_more"></div>
+            </div>
           </button>
         </div>
 
@@ -357,7 +470,6 @@
     </section>
     <!-- recycle_wrap -->
     <!-- section -->
-
     <div class="footer_wrap">
       <footer>
         <div class="footer_top">
@@ -413,8 +525,9 @@
         </div>
       </footer>
     </div>
-
     <!-- wrap -->
-    <script src="script.js"></script>
+
+    <script src="main.js"></script>
+    <script src="js/header.js"></script>
   </body>
 </html>
