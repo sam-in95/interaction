@@ -214,8 +214,20 @@ footer {
   color: #989898;
 }
 
-.footer_right ul li i:hover {
-  color: #fff;
+.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fa-instagram:hover {
+  color: #e3544d;
+}
+
+.fa-twitter:hover {
+  color: #00acee;
+}
+
+.fa-youtube:hover {
+  color: #c4302b;
 }
 
 .footer_bottom {

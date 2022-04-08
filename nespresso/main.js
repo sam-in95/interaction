@@ -83,7 +83,7 @@ const $machineBtns = document.querySelectorAll('.machine_slide_btn');
 const $machineMove = document.querySelector('.machine_slide_move');
 const $machineDot = document.querySelectorAll('.machine_slide_dot ul li');
 
-let machineSlideWidth = 1240;
+let machineSlideWidth = 1240 / 2;
 
 const btnDisabled = (current) => {
   if (current === 0) {

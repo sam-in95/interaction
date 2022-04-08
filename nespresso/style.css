@@ -363,7 +363,7 @@ button {
 }
 
 .machine_slide_move {
-  width: 3720px;
+  width: 2480px;
   display: flex;
   justify-content: space-between;
   transform: translateX(0);
@@ -371,7 +371,7 @@ button {
 }
 
 .machine_slide_con {
-  width: var(--wrap);
+  width: 2480px;
   display: flex;
   justify-content: space-between;
 }
@@ -408,7 +408,27 @@ button {
 
 .machine_item:nth-child(4) img {
   width: 155px;
+  margin: 30px 0 0 70px;
+}
+
+.machine_item:nth-child(5) img {
+  width: 195px;
+  margin: 16px 0 0 42px;
+}
+
+.machine_item:nth-child(6) img {
+  width: 155px;
   margin: 26px 0 0 70px;
+}
+
+.machine_item:nth-child(7) img {
+  width: 155px;
+  margin: 26px 0 0 70px;
+}
+
+.machine_item:nth-child(8) img {
+  width: 155px;
+  margin: 30px 0 0 70px;
 }
 
 .machine_more_btn {
