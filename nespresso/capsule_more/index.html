@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/header_footer.css" />
     <link rel="stylesheet" href="capsule_more.css" />
   </head>
@@ -69,7 +69,9 @@
       <div class="banner_wrap">
         <div class="banner">
           <div class="site_map">
-            <a href="#"> 네스프레소 / 커피 / 이스피라치오네 피렌체 아르페지오 </a>
+            <a href="../index.html">네스프레소 /</a>
+            <a href="../capsule/index.html">커피 /</a>
+            <a href="#">이스피라치오네 피렌체 아르페지오</a>
           </div>
 
           <div class="item_img">
@@ -110,7 +112,7 @@
               <p class="note">(1캡슐, 최소주문수량 : 1슬리브)</p>
             </div>
 
-            <button class="basket">장바구니 담기</button>
+            <button class="basket"><p>장바구니 담기</p></button>
           </div>
         </div>
       </div>
@@ -132,26 +134,35 @@
             <img src="../img/capsule/capsule_italiana_arpeggio.png" alt="#" />
           </div>
           <div class="page_intensity">
-            <p>강도</p>
-            <div class="boxes"></div>
+            <p class="page_intensity_text">강도</p>
+            <div class="page_intensity_bar"></div>
+            <p class="page_intensity_number">9</p>
           </div>
 
           <div class="tasty_note">
             <div class="tasty roasting">
               <p>로스팅</p>
-              <div class="bar_back"></div>
+              <div class="bar_back">
+                <div class="bar"></div>
+              </div>
             </div>
             <div class="tasty bitter">
               <p>쓴 맛</p>
-              <div class="bar_back"></div>
+              <div class="bar_back">
+                <div class="bar"></div>
+              </div>
             </div>
             <div class="tasty sour">
               <p>산미</p>
-              <div class="bar_back"></div>
+              <div class="bar_back">
+                <div class="bar"></div>
+              </div>
             </div>
             <div class="tasty body">
               <p>바디감</p>
-              <div class="bar_back"></div>
+              <div class="bar_back">
+                <div class="bar"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -232,8 +243,6 @@
             - 부정, 불량식품 신고는 국번없이 1339
           </p>
         </div>
-
-        <div class="footer_gradient"></div>
       </section>
 
       <!-- footer -->
@@ -295,5 +304,7 @@
       <!-- footer -->
     </div>
     <!-- wrap -->
+    <script src="capsule_more.js"></script>
+    <script src="../js/header_footer.js"></script>
   </body>
 </html>

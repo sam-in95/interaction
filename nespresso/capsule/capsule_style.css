@@ -40,6 +40,18 @@ button {
   width: var(--wrap);
   height: 600px;
   margin: 0 auto;
+  position: relative;
+}
+
+.site_map {
+  position: absolute;
+  font-size: 14px;
+  color: #e0e0e0;
+  top: 25px;
+}
+
+.site_map a:hover {
+  text-decoration: underline;
 }
 
 .banner_text {
@@ -88,9 +100,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 18px;
   padding: 20px 0;
   cursor: pointer;
+}
+
+.tap_btn.on {
+  color: #222;
 }
 
 .tap_icon {
@@ -100,15 +116,26 @@ button {
   padding: 0 30px;
 }
 
-.capsule_tap .vertuo_icon {
+.tap_btn .vertuo_icon {
   background: url(../img/icon_vertuo.png) no-repeat;
   background-position: center center;
 }
 
-.capsule_tap .original_icon {
+.tap_btn.on .vertuo_icon {
+  background: url(../img/icon_vertuo_on.png) no-repeat;
+  background-position: center center;
+}
+
+.tap_btn .original_icon {
   background: url(../img/icon_original.png) no-repeat;
   background-position: center center;
 }
+
+.tap_btn.on .original_icon {
+  background: url(../img/icon_original_on.png) no-repeat;
+  background-position: center center;
+}
+
 .vertuo_icon:after {
   content: '';
   display: block;
@@ -130,7 +157,7 @@ button {
 /* capsule_tap */
 
 /* original_capsule_wrap */
-.original_capsule_wrap {
+.capsule_wrap {
   width: 100%;
   background: url(../img/capsule_back.png);
   background-size: 1920px;
@@ -159,12 +186,104 @@ button {
   margin: 60px auto;
   width: 1030px;
   height: 64px;
-  background-color: #999;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
+.search form {
+  display: flex;
+  align-items: center;
+}
+
+.search form .filter {
+  font-size: 16px;
+  height: 64px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  margin: 0 50px 0 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.fa-filter {
+  margin-top: 3px;
+}
+
+.search form .filter:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 24px;
+  right: -50px;
+  background-color: #787878;
+}
+
+.search form .filter_text {
+  margin: 20px 12px 20px 40px;
+}
+
+.search form .filter_icon {
+  width: 24px;
+  height: 24px;
+  background-color: var(--icon_magenta);
+}
+
+.search form .input_box {
+  width: 680px;
+  height: 64px;
+  border: none;
+  background-color: #f6f6f6;
+  /* background-color: #000; */
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 20px;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+}
+
+.search form .input_box:focus {
+  outline: none;
+}
+
+.search form .input_box::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a3a3a3;
+}
+
+.search form .align {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 80px;
+  margin-left: 40px;
+  height: 64px;
+  border: none;
+  background-color: #f6f6f6;
+  font-size: 16px;
+  color: #777;
+}
+
+.search form .align option {
+  height: 50px;
+}
+
+.vertuo_capsule,
 .original_capsule {
   width: var(--wrap);
   margin: 120px auto;
+}
+
+.vertuo_capsule {
+  display: none;
+  display: block;
+}
+
+.original_capsule {
+  display: none;
 }
 
 .capsule_categori .categori_head {
