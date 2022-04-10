@@ -236,7 +236,6 @@ button {
   height: 64px;
   border: none;
   background-color: #f6f6f6;
-  /* background-color: #000; */
   font-size: 16px;
   font-weight: 700;
   margin: 0 20px;
@@ -278,7 +277,6 @@ button {
 }
 
 .vertuo_capsule {
-  display: none;
   display: block;
 }
 
@@ -467,14 +465,78 @@ button {
   top: 300px;
   left: 50%;
   transform: translateX(-50%);
+  transition: 0.5s;
+  overflow: hidden;
 }
+
+.basket p {
+  position: absolute;
+  width: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.basket:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -120px;
+  width: 120px;
+  height: 36px;
+  background-color: var(--green_color);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.basket:hover p {
+  color: #fff;
+  z-index: 2;
+}
+
+.basket:hover:after {
+  left: 0;
+}
+/* vertuo_capsule_card */
+
+.vertuo_capsule .espresso .capsule_title {
+  margin-top: -15px;
+}
+
+.vertuo_capsule .coffee .capsule_title {
+  margin-top: 15px;
+}
+
+.vertuo_capsule .new_vertuo .categori_head {
+  background: url(../img/coffee_pack_back.jpg);
+  background-size: var(--wrap);
+}
+
+.pure_over {
+  margin-top: -10px;
+}
+
+.vertuo_capsule .coffee .categori_head {
+  background: url(../img/coffee_world_back.jpg);
+  background-size: var(--wrap);
+}
+
+.vertuo_capsule .craft_brew .categori_head {
+  background: url(../img/coffee_italiano_back.jpg);
+  background-size: var(--wrap);
+  color: #fff;
+}
+
+.vertuo_capsule .craft_brew .name {
+  color: #fff;
+}
+/* vertuo_capsule_card */
 
 /* capsule_card hover */
 .capsule_card:hover {
   height: 450px;
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  z-index: 2;
 }
 
 .capsule_card:hover .capsule_comment {
