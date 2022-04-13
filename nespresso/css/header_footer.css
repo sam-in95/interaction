@@ -66,6 +66,7 @@
 }
 
 .header_btn {
+  position: relative;
   border: 1px;
   border-radius: 20px;
   width: 125px;
@@ -73,6 +74,23 @@
   margin-left: 20px;
   font-size: 14px;
   color: #b1b1b1;
+}
+
+.header_btn .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  transform: translate(0, 0) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
 }
 
 .header_btn a {
@@ -96,12 +114,6 @@
   border: 2px solid #c75b18;
 }
 
-.header_btn:hover.header_btn .icon {
-  /* border: solid #fff; */
-  /* 스크립트로하자 */
-  color: #fff;
-}
-
 nav {
   width: 100%;
   height: 50px;
@@ -113,6 +125,7 @@ nav {
 .nav_wrap {
   width: 820px;
   margin: 0 auto;
+  position: relative;
 }
 
 .nav_wrap ul {
@@ -125,6 +138,7 @@ nav {
   font-size: 14px;
   letter-spacing: 0.1em;
   line-height: 50px;
+  position: relative;
 }
 
 .nav_wrap li a {
@@ -132,6 +146,51 @@ nav {
   display: block;
   text-align: center;
 }
+
+.sub_nav_back {
+  position: absolute;
+  width: 1920px;
+  height: 300px;
+  left: 0;
+  transform: translateX(-550px);
+  background-color: #333;
+  z-index: 1;
+  color: #fff;
+  border-top: 1px solid #f2f2f2;
+  display: none;
+}
+
+.sub_nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  display: none !important;
+}
+
+/* nav_hover */
+.nav_wrap ul li.nav_now {
+  color: #d3391b;
+}
+
+.nav_wrap ul li.nav_now::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #d3391b;
+  z-index: 3;
+  bottom: -1px;
+}
+
+.nav_wrap ul li.nav_now .sub_nav {
+  height: 300px;
+  background-color: #404040;
+  justify-content: flex-start;
+}
+
+/* nav_hover */
 
 /* header */
 
@@ -170,7 +229,7 @@ footer {
 }
 
 .footer_left .top li:after {
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 20px;
@@ -200,7 +259,7 @@ footer {
 }
 
 .footer_left .bottom li:after {
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 20px;
