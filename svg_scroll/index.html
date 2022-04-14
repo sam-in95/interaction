@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svg_scroll</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 8000px;
+      }
+      svg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="196" height="74.922" viewBox="0 0 196 74.922">
+      <g id="dyson_logo" data-name="그룹 1" transform="translate(-879.668 51.801)">
+        <path
+          id="logo_path_1"
+          data-name="패스 1"
+          d="M917.343-51.3h-9.794V-33.27h-8.9a18.431,18.431,0,0,0-18.476,18.476A18.431,18.431,0,0,0,898.644,3.682,18.43,18.43,0,0,0,917.12-14.794V-33.27Zm-9.794,36.507a8.93,8.93,0,0,1-8.9,8.9,8.93,8.93,0,0,1-8.9-8.9,8.93,8.93,0,0,1,8.9-8.9h8.9Z"
+          fill="none"
+          stroke="#000"
+          stroke-miterlimit="10"
+          stroke-width="1"
+        />
+        <path
+          id="logo_path_2"
+          data-name="패스 2"
+          d="M1372.207,42.945a18.476,18.476,0,1,1,18.476,18.476A18.43,18.43,0,0,1,1372.207,42.945Zm18.476,8.682a8.9,8.9,0,1,0-8.9-8.9A8.79,8.79,0,0,0,1390.683,51.627Z"
+          transform="translate(-374.95 -57.739)"
+          fill="none"
+          stroke="#000"
+          stroke-miterlimit="10"
+          stroke-width="1"
+        />
+        <path
+          id="logo_path_3"
+          data-name="패스 3"
+          d="M1571.484,42.945a8.682,8.682,0,1,0-17.363,0V60.753h-9.794V42.945a18.476,18.476,0,1,1,36.952,0V60.753h-9.795Z"
+          transform="translate(-506.11 -57.739)"
+          fill="none"
+          stroke="#000"
+          stroke-miterlimit="10"
+          stroke-width="1"
+        />
+        <path
+          id="logo_path_4"
+          data-name="패스 4"
+          d="M1241.641,36.222c-1.336-.89-.891-2.671,1.335-3.339,3.116-.89,8.014-.223,12.466,1.781l4.675-6.233c-2-1.781-6.233-3.784-12.688-4.229,0,0-10.685-1.336-14.915,6.678,0,0-3.784,7.569,3.784,12.243,4.675,2.894,12.466,3.784,14.915,5.342,2,1.113,1.335,3.339-1.558,4.007-5.12,1.113-11.8-1.781-14.024-3.339l-4.675,6.455c3.116,2.449,7.123,4.452,13.579,5.565,0,0,10.017,1.781,15.582-5.12,1.113-1.335,5.565-9.794-3.562-14.692C1251.658,38.894,1244.089,37.78,1241.641,36.222Z"
+          transform="translate(-267.312 -57.472)"
+          fill="none"
+          stroke="#000"
+          stroke-miterlimit="10"
+          stroke-width="1"
+        />
+        <path
+          id="logo_path_5"
+          data-name="패스 5"
+          d="M1064.356,70.728c.445.222,4.9,3.339,9.349,3.561,10.685.223,11.353-10.907,11.353-13.356-2,2.226-6.233,3.562-8.682,3.562A18.242,18.242,0,0,1,1057.9,46.242V28.211h9.795V46.242a8.681,8.681,0,1,0,17.363,0V28.211h9.794V46.242c0,16.028.891,32.5-14.914,36.284a23.172,23.172,0,0,1-20.479-4.9Z"
+          transform="translate(-135.438 -60.591)"
+          fill="none"
+          stroke="#000"
+          stroke-miterlimit="10"
+          stroke-width="1"
+        />
+      </g>
+    </svg>
+
+    <script>
+      // Thanks, CSS Tricks, for the guidance! https://css-tricks.com/scroll-drawing/
+
+      // getting the length of the svg path
+      const svg = document.querySelector("#logo_path_1");
+      const length = svg.getTotalLength();
+
+      // start position of the drawing - normal display pre-animation
+      svg.style.strokeDasharray = length;
+
+      // hides the svg before the scrolling starts
+      svg.style.strokeDashoffset = length;
+
+      // offset the svg dash by the same amount as the percentage scrolled
+      window.addEventListener("scroll", () => {
+        const scrollpercent =
+          (document.body.scrollTop + document.documentElement.scrollTop) /
+          (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+        const draw = length * scrollpercent;
+
+        // Reverse the drawing (when scrolling upwards)
+        svg.style.strokeDashoffset = length - draw;
+      });
+    </script>
+  </body>
+</html>
