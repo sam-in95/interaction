@@ -95,14 +95,18 @@ button {
 .banner_machine {
   width: 640px;
   height: 640px;
-  margin: 0 auto;
+  margin: 0px auto;
   padding-top: 300px;
+  transform: translateY(-20%);
+  opacity: 0.4;
+  transition: 1.2s ease-in-out;
 }
 
 .banner_machine img {
   width: 640px;
   height: 640px;
 }
+
 /* banner */
 
 /* section */
