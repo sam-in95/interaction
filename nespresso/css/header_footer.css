@@ -110,11 +110,16 @@
 }
 
 .login_btn {
-  border: 2px solid #b1b1b1;
+  border: 1px solid #b1b1b1;
 }
 
 .basket_btn {
-  border: 2px solid #c75b18;
+  border: 1px solid #c75b18;
+}
+
+.header_btn:hover p,
+.header_btn:hover .icon {
+  color: #fff;
 }
 
 nav {
@@ -185,7 +190,7 @@ nav {
 /* nav_hover */
 
 .nav_wrap > ul > li.nav_now::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
@@ -239,7 +244,7 @@ footer {
 }
 
 .footer_left .top li:after {
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 20px;
@@ -269,7 +274,7 @@ footer {
 }
 
 .footer_left .bottom li:after {
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 20px;
