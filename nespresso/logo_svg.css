@@ -1,10 +1,24 @@
+.svg_logo_wrap {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: -185px;
+  z-index: 50;
+  background-color: #000;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  transition: background-color 0s;
+}
+
 #svg_logo {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
-  width: 20vw;
+  width: 50vw;
   transform: translate(-50%);
   animation: fill 0.5s ease forwards 1s;
+  transition: 0.5s;
 }
 
 #svg_logo path {
