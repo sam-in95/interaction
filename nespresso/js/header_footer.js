@@ -15,35 +15,40 @@ const $headerBtns = document.querySelectorAll('.header_btn');
 const $headerBtnsIcon = document.querySelectorAll('.header_btn .icon');
 
 $headerBtns.forEach((btn, index) => {
-  btn.addEventListener('click', (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
-
-    const targetRect = btn.getBoundingClientRect();
-
-    const buttonTop = y - targetRect.y;
-    const buttonLeft = x - targetRect.x;
-
-    const $circle = document.createElement('span');
-    $circle.classList.add('circle');
-    $circle.style.top = buttonTop + 'px';
-    $circle.style.left = buttonLeft + 'px';
-
-    e.target.appendChild($circle);
-
-    if (index === 0) {
-      // .header
-      // btn.style.color = '#000';
-      $circle.style.backgroundColor = '#fff';
-    } else {
-      // btn.style.color = '#000';
-      $circle.style.backgroundColor = '#c75b18';
-    }
-
-    setTimeout(() => {
-      $circle.remove();
-    }, 500);
-  });
+  // btn.addEventListener("mouseover", (e) => {
+  //   if (index === 0) {
+  //     e.target.classList.add("login_hover");
+  //   } else if (index === 1) {
+  //     e.target.classList.add("basket_hover");
+  //   }
+  // });
+  // btn.addEventListener("mouseleave", (e) => {
+  //   e.target.classList.remove("login_hover");
+  //   e.target.classList.remove("basket_hover");
+  // });
+  // btn.addEventListener("click", (e) => {
+  //   const x = e.clientX;
+  //   const y = e.clientY;
+  //   const targetRect = btn.getBoundingClientRect();
+  //   const buttonTop = y - targetRect.y;
+  //   const buttonLeft = x - targetRect.x;
+  //   const $circle = document.createElement("span");
+  //   $circle.classList.add("circle");
+  //   $circle.style.top = buttonTop + "px";
+  //   $circle.style.left = buttonLeft + "px";
+  //   e.target.appendChild($circle);
+  //   if (index === 0) {
+  //     // .header
+  //     // btn.style.color = '#000';
+  //     $circle.style.backgroundColor = "#fff";
+  //   } else {
+  //     // btn.style.color = '#000';
+  //     $circle.style.backgroundColor = "#c75b18";
+  //   }
+  //   setTimeout(() => {
+  //     $circle.remove();
+  //   }, 500);
+  // });
 });
 
 // nav

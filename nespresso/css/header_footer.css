@@ -110,11 +110,16 @@
 }
 
 .login_btn {
-  border: 2px solid #b1b1b1;
+  border: 1px solid #b1b1b1;
 }
 
 .basket_btn {
-  border: 2px solid #c75b18;
+  border: 1px solid #c75b18;
+}
+
+.header_btn:hover p,
+.header_btn:hover .icon {
+  color: #fff;
 }
 
 nav {
