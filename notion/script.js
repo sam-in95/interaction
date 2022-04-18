@@ -1,3 +1,27 @@
+// header shadow
+const $header = document.querySelector('header');
+const $navDot = document.querySelector('.nav_dot');
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.scrollY;
+  if (scrollTop === 0) {
+    $header.classList.remove('header_shadow');
+  } else {
+    $header.classList.add('header_shadow');
+  }
+
+  console.log(scrollTop);
+  if (scrollTop >= 0 && scrollTop < 946) {
+    $navDot.style.top = '10px';
+  } else if (scrollTop >= 946 && scrollTop < 1996) {
+    $navDot.style.top = '40px';
+  } else if (scrollTop >= 1996 && scrollTop < 3046) {
+    $navDot.style.top = '70px';
+  } else {
+    $navDot.style.top = '100px';
+  }
+});
+
 // background animation
 
 const $bannerDots = document.querySelectorAll('.banner_back');
@@ -28,24 +52,10 @@ setInterval(() => {
 
 const $headTitle = document.querySelectorAll('h2');
 
-// $headTitle.forEach((title) => {
-//   title.innerHTML = title.innerText
-//     .split('')
-//     .map((title, index) => `<span style="transition-delay:${index * 50}ms">${title}</span>`)
-//     .join('');
-// });
-
-// const $headTitleSpan = document.querySelectorAll('.ability_title span');
-// $headTitleSpan.forEach((span) => {
-//   span.addEventListener('click', () => {
-//     span.style.transform = `translateY(0)`;
-//     // alert();
-//   });
-// });
-
 // video on
 const $videoTextCon = document.querySelectorAll('.video_text_con');
 const $video = document.querySelectorAll('video');
+const $videoImg = document.querySelectorAll('.video_text_img');
 
 $videoTextCon.forEach((text, index) => {
   text.addEventListener('click', (e) => {
@@ -58,6 +68,11 @@ $videoTextCon.forEach((text, index) => {
         video.style.display = 'none';
       });
       $video[index].style.display = 'block';
+
+      $videoImg.forEach((img) => {
+        img.style.display = 'none';
+      });
+      $videoImg[index].style.display = 'block';
     }
   });
 });
@@ -80,13 +95,6 @@ const slideLen = $storyBoxes.length;
 const slideSpeed = 3000;
 const slideWidth = 3864;
 
-console.log(slideLen);
-
-// let firstChild = $storyBoxSlide.firstElementChild;
-// let clonedFirst = firstChild.cloneNode(true);
-
-// $storyBoxSlide.appendChild(clonedFirst);
-
 setInterval(() => {
   slideCurrent++;
   let slideWidth = $storyBoxSlide.style.transform;
@@ -99,6 +107,4 @@ setInterval(() => {
       slideCurrent = 0;
     });
   }
-
-  console.log(slideCurrent);
 }, 1000);
