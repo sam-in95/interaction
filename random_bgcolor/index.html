@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        padding-top: 50px;
+        width: 200px;
+        margin: 0 auto;
+      }
+
+      button {
+        border: 1px solid #000;
+        background: none;
+        padding: 10px 20px;
+        font-size: 24px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      button:hover {
+        background-color: lightyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn" onclick="bgChange()">Random Color</button>
+    </div>
+
+    <script>
+      const $btn = document.querySelector(".btn");
+
+      function bgChange() {
+        // document.body.style.backgroundColor = `#${Math.round(Math.random()*0xffffff).toString(16)}`
+        document.body.style.backgroundColor = `rgba(${Math.ceil(Math.random() * 255)},${Math.ceil(Math.random() * 255)},${Math.ceil(
+          Math.random() * 255
+        )}
+        )`;
+      }
+    </script>
+  </body>
+</html>
