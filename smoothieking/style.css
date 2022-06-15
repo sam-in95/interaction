@@ -502,7 +502,7 @@ nav ul li:hover a {
   display: flex;
   margin-left: -200px;
   /* transform: translateX(0); */
-  /* transition: transform 0.5s; */
+  transition: transform 0.5s;
   align-items: center;
   margin-top: 50px;
 }
@@ -611,6 +611,19 @@ nav ul li:hover a {
   border-radius: 35px;
   font-family: 'GongGothicMedium';
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.16);
+  display: flex;
+}
+
+.store_btn p {
+  line-height: 48px;
+  margin-left: 50px;
+  font-size: 16px;
+}
+
+.store_btn i {
+  line-height: 44px;
+  margin-left: 20px;
+  font-size: 16px;
 }
 
 .map {

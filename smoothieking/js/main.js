@@ -38,7 +38,7 @@ const $slideDot = document.querySelectorAll('.swiper ul li');
 
 let slidePosition = 0;
 let slideWidth = 770;
-let slideSpeed = 500;
+let slideSpeed = 200;
 let current = 0;
 $swiperWrap.style.transition = `${slideSpeed}+ms`;
 
@@ -57,7 +57,12 @@ setInterval(() => {
   $slideDot.forEach((dot, index) => {
     dot.classList.remove('swiper_nav_now');
   });
-  // $slideDot[current].classList.add('swiper_nav_now');
+  if (current < 3) {
+    $slideDot[current].classList.add('swiper_nav_now');
+  }
+  if (current === 3) {
+    $slideDot[0].classList.add('swiper_nav_now');
+  }
 
   if (current === 3) {
     current = 0;
