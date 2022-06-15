@@ -38,7 +38,7 @@ const $slideDot = document.querySelectorAll('.swiper ul li');
 
 let slidePosition = 0;
 let slideWidth = 770;
-let slideSpeed = 200;
+let slideSpeed = 500;
 let current = 0;
 
 setInterval(() => {
@@ -75,7 +75,7 @@ setInterval(() => {
   }
 
   console.log(current);
-}, 2000);
+}, 5000);
 
 // $slidePrev.addEventListener('click', () => {
 //   current--;
