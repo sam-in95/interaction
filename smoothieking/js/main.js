@@ -38,12 +38,12 @@ const $slideDot = document.querySelectorAll('.swiper ul li');
 
 let slidePosition = 0;
 let slideWidth = 770;
-let slideSpeed = 200;
+let slideSpeed = 500;
 let current = 0;
 $swiperWrap.style.transition = `${slideSpeed}+ms`;
 
 setInterval(() => {
-  $swiperWrap.style.transition = `${slideSpeed}+ms`;
+  $swiperWrap.style.transition = `${slideSpeed}ms`;
   current++;
   // slideWidth = slideWidth + current;
   slidePosition = slideWidth * current;
