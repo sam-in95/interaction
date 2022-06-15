@@ -338,6 +338,11 @@
         level: 3,
       };
       var map = new kakao.maps.Map(container, options);
+
+      var marker = new kakao.maps.Marker({
+        position: map.getCenter(),
+      });
+      marker.setMap(map);
     </script>
   </body>
 </html>
