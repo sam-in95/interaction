@@ -342,7 +342,7 @@
       var map = new kakao.maps.Map(container, options);
 
       var marker = new kakao.maps.Marker({
-        position: markerPosition,
+        position: map.getCenter(),
       });
 
       marker.setMap(map);
