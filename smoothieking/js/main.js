@@ -40,7 +40,6 @@ let slidePosition = 0;
 let slideWidth = 770;
 let slideSpeed = 200;
 let current = 0;
-$swiperWrap.style.transition = `${slideSpeed}+ms`;
 
 setInterval(() => {
   $swiperWrap.style.transition = `${slideSpeed}ms`;
@@ -65,21 +64,23 @@ setInterval(() => {
   }
 
   if (current === 3) {
-    current = 0;
-    slidePosition = 0;
-    $swiperSlide[current + 1].classList.add('slide_now');
-    $swiperWrap.style.transition = `0ms`;
-    $swiperWrap.style.transform = `translateX(-${slidePosition}px)`;
-    // $swiperWrap.style.transform = `translateX(-${0}px)`;
+    setTimeout(() => {
+      current = 0;
+      slidePosition = 0;
+      $swiperSlide[current + 1].classList.add('slide_now');
+      $swiperWrap.style.transition = `0ms`;
+      $swiperWrap.style.transform = `translateX(-${slidePosition}px)`;
+      // $swiperWrap.style.transform = `translateX(-${0}px)`;
+    }, 1000);
   }
 
   console.log(current);
 }, 2000);
 
-$slidePrev.addEventListener('click', () => {
-  current--;
-});
+// $slidePrev.addEventListener('click', () => {
+//   current--;
+// });
 
-$slideNext.addEventListener('click', () => {
-  current++;
-});
+// $slideNext.addEventListener('click', () => {
+//   current++;
+// });
