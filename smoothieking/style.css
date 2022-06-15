@@ -501,8 +501,6 @@ nav ul li:hover a {
 .swiper_wrapper {
   display: flex;
   margin-left: -200px;
-  /* transform: translateX(0); */
-  transition: transform 0.5s;
   align-items: center;
   margin-top: 50px;
 }
