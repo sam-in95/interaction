@@ -611,6 +611,20 @@ nav ul li:hover a {
   border-radius: 35px;
   font-family: 'GongGothicMedium';
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  display: flex;
+}
+
+.store_btn p {
+  line-height: 48px;
+  margin-left: 40px;
+  font-size: 16px;
+}
+
+.store_btn i {
+  line-height: 48px;
+  margin-left: 20px;
+  font-size: 16px;
 }
 
 .map {
