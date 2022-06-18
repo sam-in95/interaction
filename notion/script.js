@@ -1,16 +1,20 @@
 // header shadow
 const $header = document.querySelector('header');
 const $navDot = document.querySelector('.nav_dot');
+const $logo = document.querySelector('.logo');
 
 window.addEventListener('scroll', () => {
   let scrollTop = window.scrollY;
   if (scrollTop === 0) {
     $header.classList.remove('header_shadow');
+    $header.style.height = '100px';
+    $logo.style.transform = 'scale(1)';
   } else {
     $header.classList.add('header_shadow');
+    $header.style.height = '70px';
+    $logo.style.transform = 'scale(0.8)';
   }
 
-  console.log(scrollTop);
   if (scrollTop >= 0 && scrollTop < 946) {
     $navDot.style.top = '10px';
   } else if (scrollTop >= 946 && scrollTop < 1996) {
@@ -52,6 +56,19 @@ setInterval(() => {
 
 const $headTitle = document.querySelectorAll('h2');
 
+const controller_1 = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+  triggerElement: '#trigger1',
+  triggerHook: 0.9,
+  offset: 550, // move trigger to center of element
+  duration: '100%',
+  reverse: false, // only do once
+})
+  .setClassToggle('.ability_title', 'title_show') // add class toggle
+  .addIndicators() // add indicators (requires plugin)
+  .addTo(controller_1);
+
 // video on
 const $videoTextCon = document.querySelectorAll('.video_text_con');
 const $video = document.querySelectorAll('video');
@@ -89,22 +106,53 @@ $scrollBtn.forEach((btn, index) => {
 });
 
 // card slide
-const $storyBoxSlide = document.querySelector('.story_box_slide');
-const $storyBoxes = document.querySelectorAll('.story_box');
-const slideLen = $storyBoxes.length;
-const slideSpeed = 3000;
-const slideWidth = 3864;
+const controller_2 = new ScrollMagic.Controller();
 
-setInterval(() => {
-  slideCurrent++;
-  let slideWidth = $storyBoxSlide.style.transform;
-  $storyBoxSlide.style.transition = `${slideSpeed}ms`;
-  $storyBoxSlide.style.transform = `translateX(${slideCurrent * -50}px)`;
-  if (slideCurrent === 72) {
-    setTimeout(() => {
-      $storyBoxSlide.style.transition = '0ms';
-      $storyBoxSlide.style.transform = `translateX(-280px)`;
-      slideCurrent = 0;
-    });
-  }
-}, 1000);
+new ScrollMagic.Scene({
+  triggerElement: '#trigger2',
+  triggerHook: 0.9,
+  offset: 1550, // move trigger to center of element
+  duration: '100%',
+  reverse: false, // only do once
+})
+  .setClassToggle('.story_title', 'title_show') // add class toggle
+  .addIndicators() // add indicators (requires plugin)
+  .addTo(controller_2);
+
+// const $storyBoxSlide = document.querySelector('.story_box_slide');
+// const $storyBoxes = document.querySelectorAll('.story_box');
+// const slideLen = $storyBoxes.length;
+// const slideSpeed = 3000;
+// const slideWidth = 3864;
+
+// setInterval(() => {
+//   slideCurrent++;
+//   let slideWidth = $storyBoxSlide.style.transform;
+//   $storyBoxSlide.style.transition = `${slideSpeed}ms`;
+//   $storyBoxSlide.style.transform = `translateX(${slideCurrent * -50}px)`;
+//   if (slideCurrent === 72) {
+//     setTimeout(() => {
+//       $storyBoxSlide.style.transition = '0ms';
+//       $storyBoxSlide.style.transform = `translateX(-280px)`;
+//       slideCurrent = 0;
+//     });
+//   }
+// }, 1000);
+const swiper = new Swiper('.Swiper', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 3,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  autoplay: {
+    delay: 3000,
+  },
+});

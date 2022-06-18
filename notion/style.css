@@ -80,6 +80,7 @@ nav ul {
 
 .logo {
   margin: 0 auto;
+  transition: 0.3s;
 }
 
 /* header */
@@ -291,12 +292,25 @@ nav ul {
   font-family: var(--font-black-han);
   transition: 0.3s cubic-bezier(0.68, -0.55, -0.265, 1.55);
   margin-top: 180px;
+  transform: translateY(50px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.ability_title.title_show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .ability_title span {
   transform: translateY(-30px);
   /* display: inline-block; */
   transition: 0.3s cubic-bezier(0.68, -0.55, -0.265, 1.55);
+}
+
+.video_text_con {
+  background-color: grey;
+  z-index: 2;
 }
 /* 
 .ability_title span:hover {
@@ -412,6 +426,14 @@ video {
   font-family: var(--font-black-han);
   text-align-last: left;
   margin: 0 110px 0 560px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.story_title.title_show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .story_title_img {
