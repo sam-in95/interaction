@@ -1,5 +1,5 @@
 :root {
-  --font-black-han: 'Black Han Sans', sans-serif;
+  --font-black-han: "Black Han Sans", sans-serif;
   --section-height: 1050px;
   --color-dot-Y: #feca00;
   --color-dot-O: #ff5e00;
@@ -18,7 +18,7 @@ button:focus {
 body {
   width: 100%;
   background-color: #fffefe;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   color: #222;
   overflow-x: hidden;
 }
@@ -58,7 +58,7 @@ nav ul {
 }
 
 .nav_dot {
-  content: '';
+  content: "";
   display: block;
   width: 10px;
   height: 10px;
