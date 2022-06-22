@@ -485,9 +485,9 @@ nav ul li:hover a {
   font-size: 48px;
 }
 
-.franchis_coment {
+.franchis_comment {
   font-family: 'GongGothicMedium';
-  font-size: 40px;
+  font-size: 28px;
   letter-spacing: 0.03em;
   margin-top: 75px;
   color: #666;
@@ -646,6 +646,7 @@ nav ul li:hover a {
 footer {
   width: 1280px;
   margin: 0 auto;
+  position: relative;
 }
 
 .footer_logo {
@@ -658,18 +659,27 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .footer_con_1_left ul {
   display: flex;
   margin-top: 50px;
+  width: 700px;
 }
 
 .footer_con_1_left ul li {
   font-size: 15px;
   letter-spacing: 0.05em;
   color: #888;
+  position: relative;
+  padding: 0 20px 0 0;
+}
+
+.footer_con_1_right {
+  position: absolute;
+  right: 0;
+  top: 310px;
 }
 
 .footer_con_2 p {

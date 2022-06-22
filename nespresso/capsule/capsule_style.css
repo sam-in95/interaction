@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   overflow-x: hidden;
   width: 100%;
   max-width: 1920px;
@@ -64,6 +64,8 @@ button {
   font-size: 60px;
   letter-spacing: 0.08em;
   line-height: 90px;
+  color: #000;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #000;
 }
 
 .banner_text p {
@@ -137,7 +139,7 @@ button {
 }
 
 .vertuo_icon:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 2px;
@@ -212,7 +214,7 @@ button {
 }
 
 .search form .filter:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 2px;
@@ -379,7 +381,6 @@ button {
   flex-wrap: wrap;
   align-content: flex-start;
 }
-
 .capsule_card {
   width: 295px;
   height: 360px;
@@ -429,7 +430,7 @@ button {
 }
 
 .intensity:after {
-  content: "";
+  content: '';
   display: block;
   width: 2px;
   height: 16px;
@@ -479,7 +480,7 @@ button {
 }
 
 .basket:after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
@@ -537,7 +538,7 @@ button {
 /* capsule_card hover */
 .capsule_card:hover {
   height: 450px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.5);
 }
 
 .capsule_card:hover .capsule_comment {
@@ -551,7 +552,7 @@ button {
   text-align: center;
   left: 50%;
   font-size: 14px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   line-height: 22px;
   color: #707070;
   transform: translateX(-50%);

@@ -110,16 +110,11 @@
 }
 
 .login_btn {
-  border: 1px solid #b1b1b1;
+  border: 2px solid #b1b1b1;
 }
 
 .basket_btn {
-  border: 1px solid #c75b18;
-}
-
-.header_btn:hover p,
-.header_btn:hover .icon {
-  color: #fff;
+  border: 2px solid #c75b18;
 }
 
 nav {
@@ -144,7 +139,8 @@ nav {
 .nav_wrap li {
   color: #fff;
   font-size: 14px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
+  font-weight: bold;
   line-height: 50px;
   position: relative;
 }
@@ -187,6 +183,10 @@ nav {
   display: none;
 }
 
+.sub_nav li {
+  font-size: 12px;
+  font-weight: 300;
+}
 /* nav_hover */
 
 .nav_wrap > ul > li.nav_now::after {
