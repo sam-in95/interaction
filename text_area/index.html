@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .aaa {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <textarea name="" id="" onkeyup="onByteCheck(this)"></textarea>
+      <button class="btn" onSubmit="" disabled="">버튼</button>
+    </form>
+    <div class="aaa">
+      <p class="text"></p>
+      <p>&nbsp;/ 50</p>
+    </div>
+
+    <script>
+      const $text = document.querySelector('.text');
+      const $btn = document.querySelector('.btn');
+      $btn.disabled = false;
+
+      const onByteCheck = (obj) => {
+        const maxByte = 100;
+        const textValue = obj.value;
+        const textLength = textValue.length;
+        // console.log(textValue);
+
+        let textByte = 0;
+
+        for (let i = 0; i < textLength; i++) {
+          const textBtyeChanged = textValue.charAt(i);
+          const uniChar = escape(textBtyeChanged);
+          // console.log(uniChar.length);
+
+          // textByte += uniChar.length;
+          if (uniChar.length > 4) {
+            textByte += 3;
+          } else {
+            textByte += 1;
+          }
+          console.log(textByte);
+          $text.textContent = textByte;
+        }
+
+        if (textByte > 50) {
+          alert('50넘음');
+          $btn.disabled = true;
+          $text.style.color = 'red';
+        } else {
+          $btn.disabled = false;
+          $text.style.color = 'green';
+        }
+      };
+    </script>
+  </body>
+</html>
